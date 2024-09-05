@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echocardiography Report</title>
+    <style>
+        body {
+            font-family: Calibri, Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .input-section, .result-section {
+            padding: 20px;
+        }
+
+        .result-section {
+            width: 50%;
+        }
+
+        .input-section {
+            width: 100%;
+        }
+
+        :root:has(.result-section) .input-section {
+            width: 50%;
+        }
+
+        .input-section {
+            background-color: #ADD8E6;
+        }
+
+        .result-section {
+            background-color: #FFFFFF;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .input-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .input-row label,
+        .input-row input {
+            width: 45%;
+        }
+
+        label {
+            display: block;
+            margin: 10px 5px;
+        }
+
+        input[type="text"] {
+            height: 24px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .progress {
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+        .actions{
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .actions button{
+            background-color: #d5d5d5;
+            color: #333;
+            width: 200px;
+            padding: 12px;
+            border: 1px solid #777;
+        }
+        button.info {
+            background-color: #0e7fd5;
+            color: white;
+            border: 1px solid #005b9f;
+        }
+        .result-section {
+            background-color: rgba(255, 240, 173, 0.83);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="input-section">
+        <form method="POST">
+            {% csrf_token %}
+            <h2>Enter echocardiography results</h2>
+            <div class="input-row">
+                <label for="aortic-diameter">1.Aortic diameter</label>
+                <input required value="{{ form_data.aortic_diameter }}" name="aortic_diameter" placeholder="mm" type="text" id="aortic-diameter">
+                <label for="left-atrium">2.Left atrium</label>
+                <input required value="{{ form_data.left_atrium }}" name="left_atrium" placeholder="mm" type="text" id="left-atrium">
+            </div>
+            <div class="input-row">
+                <label for="left-ventricular-at-rest">3.Left ventricular at rest</label>
+                <input required value="{{ form_data.left_ventricular_at_rest }}" name="left_ventricular_at_rest" placeholder="mm" type="text" id="left-ventricular-at-rest">
+                <label for="left-ventricular-size-during-contraction">4.Left ventricular size during contraction</label>
+                <input required value="{{ form_data.left_ventricular_size_during_contraction }}" name="left_ventricular_size_during_contraction" placeholder="mm" type="text" id="left-ventricular-size-during-contraction">
+            </div>
+            <div class="input-row">
+                <label for="left-ventricular-mass-at-rest">5.Left ventricular mass at rest</label>
+                <input required value="{{ form_data.left_ventricular_mass_at_rest }}" name="left_ventricular_mass_at_rest" placeholder="ml" type="text" id="left-ventricular-mass-at-rest">
+
+                <label for="left-ventricular-mass-during-contraction">6.Left ventricular mass during contraction</label>
+                <input required value="{{ form_data.left_ventricular_mass_during_contraction }}" name="left_ventricular_mass_during_contraction" placeholder="ml" type="text" id="left-ventricular-mass-during-contraction">
+            </div>
+            <div class="input-row">
+                <label for="left-ventricular-ejection-fraction">7.Left ventricular ejection fraction</label>
+                <input required value="{{ form_data.left_ventricular_ejection_fraction }}" name="left_ventricular_ejection_fraction" placeholder="%" type="text" id="left-ventricular-ejection-fraction">
+
+                <label for="intraventricular-septum">8.Intraventricular septum</label>
+                <input required value="{{ form_data.intraventricular_septum }}" name="intraventricular_septum" placeholder="mm" type="text" id="intraventricular-septum">
+            </div>
+            <div class="input-row">
+                <label for="posterior-wall-of-the-left-ventricle">9.Posterior wall of the left ventricle</label>
+                <input required value="{{ form_data.posterior_wall_of_the_left_ventricle }}" name="posterior_wall_of_the_left_ventricle" placeholder="mm" type="text" id="posterior-wall-of-the-left-ventricle">
+                <label for="right-ventricle">10.Right ventricle</label>
+                <input required value="{{ form_data.right_ventricle }}" name="right_ventricle" placeholder="mm" type="text" id="right-ventricle">
+            </div>
+            <div class="actions">
+                <button type="submit" class="info" id="check-results">Show the results</button>
+                <button type="reset">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    {% if form_data %}
+        <div class="result-section">
+            <h2>Result</h2>
+            <div>
+                <label>Angina Pectoris</label>
+                <div class="progress">
+                    <div class="progress-bar" style="width: {{ results.1 }}%;">{{ results.1 }}%</div>
+                </div>
+            </div>
+            
+            <div>
+                <label>Hypertension</label>
+                <div class="progress">
+                    <div class="progress-bar" style="width: {{ results.2 }}%;">{{ results.2 }}%</div>
+                </div>
+            </div>
+            
+           
+            
+           
+            
+            <div>
+                <label>Uncertain</label>
+                <div class="progress">
+                    <div class="progress-bar" style="width: {{ results.0 }}%;">{{ results.0 }}%</div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+Watching for file changes with StatReloader
+[25/Apr/2024 09:37:46] "GET / HTTP/1.1" 200 5312
+[25/Apr/2024 09:37:48] "GET / HTTP/1.1" 200 5312
+[25/Apr/2024 09:54:40] code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x1b\x00\x03\x02\x00\x02\x00\x17\x00\x00\x003\x04ï\x04í\x8a\x8a\x00\x01\x00c\x99\x04Àç\x7f*>þdÉx¥{¾ÓdÏíjÏúÙ')
+[25/Apr/2024 09:54:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+[25/Apr/2024 09:54:40] code 400, message Bad request version ('ïÔ©\x82l\x7f\x11\x93\x0f')
+[25/Apr/2024 09:54:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+[25/Apr/2024 09:54:49] "GET / HTTP/1.1" 200 5312
+Not Found: /favicon.ico
+[25/Apr/2024 09:54:49] "GET /favicon.ico HTTP/1.1" 404 2213
+[25/Apr/2024 09:55:03] "GET / HTTP/1.1" 200 5312
+[25/Apr/2024 11:15:03] "GET / HTTP/1.1" 200 5312
+Not Found: /favicon.ico
+[25/Apr/2024 11:15:03] "GET /favicon.ico HTTP/1.1" 404 2213
+[25/Apr/2024 11:15:11] "POST / HTTP/1.1" 200 7179
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+April 25, 2024 - 09:37:42
+Django version 4.2.9, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8800/
+Quit the server with CONTROL-C.
+
+<QueryDict: {'csrfmiddlewaretoken': ['mY6ajEgntHg6Zhx4HhECFdVDdsAwqbUzhZiXVFxYnRyK9MAkLAFHOGAU3G1rTOJ8'], 'aortic_diameter': ['1'], 'left_atrium': ['1'], 'left_ventricular_at_rest': ['1'], 'left_ventricular_size_during_contraction': ['1'], 'left_ventricular_mass_at_rest': ['1'], 'left_ventricular_mass_during_contraction': ['1'], 'left_ventricular_ejection_fraction': ['1'], 'intraventricular_septum': ['1'], 'posterior_wall_of_the_left_ventricle': ['1'], 'right_ventricle': ['1']}>
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+April 25, 2024 - 19:05:27
+Django version 4.2.9, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8800/
+Quit the server with CONTROL-C.
+
+3
+/root/.cache/pypoetry/virtualenvs/kep-uz_backend-cWgxVFsN-py3.12/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+0
+6
+0
+0
+0
+0
+[71.4, 0.0, 0.0, 14.3, 0.0, 0.0, 14.3, 0.0]
+[25/Apr/2024 19:07:31] "POST / HTTP/1.1" 200 7432
+3
+/root/.cache/pypoetry/virtualenvs/kep-uz_backend-cWgxVFsN-py3.12/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:469: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+0
+6
+0
+0
+0
+0
+[71.4, 0.0, 0.0, 14.3, 0.0, 0.0, 14.3, 0.0]
+[25/Apr/2024 19:07:35] "POST / HTTP/1.1" 200 7432
+/home/echocardiography_report/app/ml_algo.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+April 26, 2024 - 05:29:54
+Django version 4.2.9, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8800/
+Quit the server with CONTROL-C.
+
+/home/echocardiography_report/app/ml_algo.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+April 26, 2024 - 05:30:01
+Django version 4.2.9, using settings 'core.settings'
+Starting development server at http://0.0.0.0:8800/
+Quit the server with CONTROL-C.
+
